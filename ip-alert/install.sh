@@ -16,6 +16,9 @@ Description=Starts the ip alert system
 [Service]
 ExecStart=/usr/bin/python3 /home/grafana/ip-alert/ip-alert.py
 Type=simple
+
+[Install]
+WantedBy=grafana.service
 " > /lib/systemd/system/ip-alert.service
 systemctl daemon-reload
 systemctl enable ip-alert.service
