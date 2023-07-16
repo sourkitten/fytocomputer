@@ -49,7 +49,7 @@ def create_html_file(user_list):
         html_content += '\t</a>\n'
     
     html_content += '''<a class="link" href="changelog">
-		<img class="link-image" src="Fytocomputer_files/banner_008.jpg" alt="Fyto lol"> <!-- add class to image -->
+		<img class="link-image" src="changelog/banner.jpg" alt="Fyto lol"> <!-- add class to image -->
                 <span class="link-text">changelog</span> <!-- add class to text -->
 	  </a>
 	</div>
