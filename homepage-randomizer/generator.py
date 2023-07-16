@@ -12,7 +12,6 @@ custom_image_html = {
 def get_home_directories():
     home_directory = '/home/'
     directories = [entry for entry in os.listdir(home_directory) if os.path.isdir(os.path.join(home_directory, entry))]
-    directories.append('evident')
     return directories
 
 
