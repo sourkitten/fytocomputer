@@ -21,4 +21,5 @@ systemctl daemon-reload
 systemctl enable ip-alert.service
 systemctl start ip-alert.service
 
-chown -R grafana /home/grafana/ip-alert/
+chown -R grafana:grafana /home/grafana/ip-alert/
+chmod -R g+rwx /home/grafana/ip-alert/
