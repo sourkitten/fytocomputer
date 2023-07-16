@@ -1,11 +1,22 @@
 import socket
 from time import sleep
 import requests
-import discord
+from argparse import ArgumentParser
+
+# Create the argument parser
+parser = ArgumentParser()
+parser.add_argument('--test', action='store_true', help='Send message to test master')
+
+# Parse the command-line arguments
+args = parser.parse_args()
+
+# Testing environment
+if args.test:
+    webhook = 'https://discord.com/api/webhooks/1129446964539424919/Vg5Xl3dPOrBnxgzha7opfyP3oYFLYRUgCqcxScmefmZZ5OETN9TT--EXrCqcPh9kVqen'
+else:
+    webhook = 'https://discord.com/api/webhooks/1129466798249607178/AI1t84flIUMBeY3ZEIM7ZS4Q5_6JgUN8hZKmuLVcXhlINAPYbcrdD24dbJLGiHKMj5VS'
 
 # Fixed lists, these should be in JSON files that get parsed on startup
-webhook_test = 'https://discord.com/api/webhooks/1129446964539424919/Vg5Xl3dPOrBnxgzha7opfyP3oYFLYRUgCqcxScmefmZZ5OETN9TT--EXrCqcPh9kVqen'
-webhook = 'https://discord.com/api/webhooks/1129466798249607178/AI1t84flIUMBeY3ZEIM7ZS4Q5_6JgUN8hZKmuLVcXhlINAPYbcrdD24dbJLGiHKMj5VS'
 ping_list = ['sour_kitty', 'bepaque']
 discord_ids = {'sour_kitty':'410366886321192962', 'bepaque':'183129344229638144'}
 
@@ -25,7 +36,7 @@ def send_webhook(message):
     data = {
         'content': message
     }
-    response = requests.post(webhook_test, json=data)
+    response = requests.post(webhook, json=data)
     if response.status_code != 204:
         print(f"Failed to send Discord webhook: {response.text}")
 
