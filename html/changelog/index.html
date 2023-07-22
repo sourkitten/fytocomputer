@@ -1,5 +1,5 @@
 <html>
-	
+
 	<head>
 		<title>
 			Fytocomputer Changelog
@@ -8,60 +8,96 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 
-	<body style="background-color:171717;color:c4c4c4">
-		<h1 class="main">Server Changelog</h1>
+	<body>
+		<div id="cat"></div>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const cat = document.getElementById("cat");
+	
+				document.addEventListener("mousemove", function (event) {
+					const mouseX = event.clientX;
+					const mouseY = event.clientY;
+					const catX = mouseX - cat.offsetWidth / 2 + 10;
+					const catY = mouseY - cat.offsetHeight / 2;
+	
+					cat.style.transform = `translate(${catX}px, ${catY}px)`;
+				});
+			});
+		</script>
+
+		<h1><div class="passing-wave">Server Changelog</div></h1>
 		
 		<!--Insert change here-->
 
-		<br>
+		<hr style="border-top: 5px solid #c4c4c4">
 
 		<div class="change">
 			<h3>2023-Jul-23</h3>
 			<div class="bullets">
+				<li class="bullets">Bog and Terraria servers are live! Shoutout to bepaque!</li>
 				<li class="bullets">Changed game server set-up to systemd
-					and streamlined the process a bit</li>
-				<li class="bullets">Enable WoL and Wake on Power (or w/e it's called)</li>
+					and streamlined the process a bit.</li>
+				<li class="bullets">Enable WoL and Wake on Power (or w/e it's called).</li>
 				<li class="bullets">Automatically pull homepage contents,
-					via a private github repository</li>
+					via a private github repository.</li>
+				<li class="bullets">Made the changelog a bit 
+					<a class="passing-wave" style="font-size: 14px; font-style: italic;"><b>gayer.</b></a></li>
+				<li class="bullets"><b>Put up this fcking
+					<a class="passing-wave" style="font-size: 14px;">gay cat.</a>
+				</b></li>
+				<li class="bullets"><b><a class="passing-wave" style="font-size: 14px;">MORE GAY.</a></b></li>
 			</div>
 			<p class="italics">Reported downtime: 2h</p>
 		</div>
 
-		<br>
+		<hr>
 
 		<div class="change">
 			<h3>2023-Jul-17</h3>
 			<div class="bullets">
-				<li class="bullets">Set up Grafana server and metrics</li>
-				<li class="bullets">Set up a Grafana dashboard for the metrics</li>
-				<li class="bullets">Created a Trello page for these tasks (internal)</li>
-				<li class="bullets">Installed zsh to the user for the gameservers</li>
+				<li class="bullets">Set up Grafana server and metrics.</li>
+				<li class="bullets">Set up a Grafana dashboard for the metrics.</li>
+				<li class="bullets">Created a Trello page for these tasks (internal).</li>
+				<li class="bullets">Installed zsh to the user for the gameservers.</li>
 				<li class="bullets">Created a discord webhook bot that alarms DNS 
-					admins on IP change, and on resolution as well</li>
+					admins on IP change, and on resolution as well.</li>
 				<li class="bullets">Automated the homepage user list (it was manual thus far) 
-					and randomized the user order (it gets updated every 2h)</li>
+					and randomized the user order (it gets updated every 2h).</li>
 			</div>
 			<p class="italics">Reported downtime: None</p>
 		</div>
 
-		<br>
+		<hr>
 
 		<div class="change">
 			<h3>2023-Jul-08</h3>
 			<div class="bullets">
-				<li class="bullets">Game servers setup/structure refactoring. Mostly internal</li>
+				<li class="bullets">Game servers setup/structure refactoring. Mostly internal.</li>
 				<li class="bullets">Game servers run automatically at
-					startup (via cron)</li>
-				<li class="bullets">Firewall rules are setup and firewall enabled (ufw)</li>
+					startup (via cron).</li>
+				<li class="bullets">Firewall rules are setup and firewall enabled (ufw).</li>
 				<li class="bullets">Local backups are finally a thing (via cron 
-					and a custom script, but <b>will be changed to systemd</b>)</li>
+					and a custom script, but <b>will be changed to systemd</b>).</li>
 				<li class="bullets">Changed the <a href="/">homepage</a> 
-					to have a title and icon</li>
+					to have a title and icon.</li>
 				<li class="bullets">Created a Changelog page. Oh! Here
-				it is!</li>
+					it is!</li>
 			</div>
 			<p class="italics">Reported downtime: None</p>
 		</div>
+
+		<hr>
+
+		<p class="italics">
+			<a href="https://github.com/sourkitten/" class="passing-wave" style="font-size: 16px;">
+				This page was made by the <b style="font-size: 18px;">gay gang</b>
+			<a href="https://github.com/sourkitten/" style="color:#fff; font-size: 16px; text-decoration: none;">🏳️‍🌈 🏳️‍⚧️</a>
+			<a href="https://github.com/sourkitten/" class="passing-wave" style="font-size: 16px;"> &lt;3</a>
+		</a></p>
+
+		<br>
+
 	</body>
 
 	<!-- If you are reading this, please send help, I am  terribly afraid of attachment :( -->

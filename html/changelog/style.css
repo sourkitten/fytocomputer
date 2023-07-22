@@ -8,3 +8,44 @@ p.italics {
 	padding-left: 30px;
 	font-style: italic
 }
+.passing-wave {
+	padding-top: 5px;
+	display: inline;
+	font-size: 45px;
+	background: linear-gradient(60deg,red, orange, yellow, green, blue, purple);;
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	background-size: 200% auto;
+	animation: wave 2s linear infinite;
+}
+
+@keyframes wave {
+	0% { background-position: 0 0; }
+	100% { background-position: 200% 0; }
+}
+
+body {
+	margin: 0;
+	overflow: hidden;
+	font-size:14px;
+	background-color: 171717;
+	color: c4c4c4
+}
+
+#cat {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background-image: url('cat.png'); /* Replace 'cat.png' with the path to your cute cat image */
+	background-size: cover;
+	border-radius: 50%;
+	pointer-events: none;
+	transition: transform 0.2s ease;
+}
+
+hr {
+	border: none;
+	border-top: 1px solid #c4c4c4;
+	margin: 10px 0;
+}
