@@ -63,7 +63,7 @@ hr {
 .pride-flag {
 	width: 24px;
 	height: 16px;
-	background-image: linear-gradient(90deg, #FF0000 14.2%, #FF0000 14.2%, #FF7F00 14.2%, #FF7F00 14.2%, #FF7F00 28.4%, #FF7F00 28.4%, #FFFF00 28.4%, #FFFF00 28.4%, #FFFF00 42.6%, #FFFF00 42.6%, #00FF00 42.6%, #00FF00 42.6%, #00FF00 56.8%, #00FF00 56.8%, #00FF00 71%, #00FF00 71%, #0000FF 71%, #0000FF 71%, #0000FF 85.2%, #0000FF 85.2%, #4B0082 85.2%, #4B0082 85.2%);
+	background-image: linear-gradient(90deg, #FF0000 16.5%, #FF0000 16.5%, #FF7F00 16.5%, #FF7F00 16.5%, #FF7F00 33%, #FF7F00 33%, #FFFF00 33%, #FFFF00 33%, #FFFF00 49.5%, #FFFF00 49.5%, #00AA00 49.5%, #00AA00 49.5%, #00AA00 66%, #00AA00 66%, #0000FF 66%, #0000FF 66%, #0000FF 82.5%, #0000FF 82.5%, #4B0082 82.5%, #4B0082 82.5%);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
