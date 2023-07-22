@@ -12,7 +12,7 @@ p.italics {
 	padding-top: 5px;
 	display: inline;
 	font-size: 45px;
-	background: linear-gradient(60deg,red, orange, yellow, green, blue, purple);;
+	background: linear-gradient(60deg,red, orange, orange, yellow, yellow, green, green, blue, blue, purple, purple, red);
 	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;
@@ -48,4 +48,31 @@ hr {
 	border: none;
 	border-top: 1px solid #c4c4c4;
 	margin: 10px 0;
+}
+
+/* Flex container to hold both flags and text */
+.flags-container {
+	padding-left: 30px;
+	font-style: italic;
+	display: flex;
+	align-items: center; /* Vertically center the items */
+	text-decoration: none;
+}
+
+/* Rainbow flag */
+.pride-flag {
+	width: 24px;
+	height: 16px;
+	background-image: linear-gradient(90deg, #FF0000 14.2%, #FF0000 14.2%, #FF7F00 14.2%, #FF7F00 14.2%, #FF7F00 28.4%, #FF7F00 28.4%, #FFFF00 28.4%, #FFFF00 28.4%, #FFFF00 42.6%, #FFFF00 42.6%, #00FF00 42.6%, #00FF00 42.6%, #00FF00 56.8%, #00FF00 56.8%, #00FF00 71%, #00FF00 71%, #0000FF 71%, #0000FF 71%, #0000FF 85.2%, #0000FF 85.2%, #4B0082 85.2%, #4B0082 85.2%);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+/* Transgender flag */
+.trans-flag {
+	width: 24px;
+	height: 16px;
+	background: linear-gradient(90deg, #55CDFC 20%, #55CDFC 20%, #F7A8B8 20%, #F7A8B8 20%, #F7A8B8 40%, #F7A8B8 40%, #FFFFFF 40%, #FFFFFF 40%, #FFFFFF 60%, #FFFFFF 60%,#F7A8B8 60%, #F7A8B8 60%, #F7A8B8 80%, #F7A8B8 80%, #55CDFC 80%, #55CDFC 80%);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
 }
