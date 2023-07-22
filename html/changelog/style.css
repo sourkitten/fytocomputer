@@ -1,0 +1,10 @@
+div.change {
+	padding-left: 20px;
+}
+div.bullets {
+	padding-left: 10px;
+}
+p.italics {
+	padding-left: 30px;
+	font-style: italic
+}

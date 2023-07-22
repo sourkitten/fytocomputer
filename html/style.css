@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* make the container fill the entire page */
+}
+
+.link {
+  position: relative;
+  width: 100%;
+  height: 100%; /* make the link fill the container */
+  overflow: hidden;
+}
+
+.link-image { /* add class for images */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.15s linear, filter 0.15s linear; /* add transition for filter */
+}
+
+.link:hover .link-image { /* reference the image class */
+  transform: scale(1.2);
+  filter: blur(8px);
+  -webkit-filter: blur(8px); /* for Safari */
+}
+
+.link-text { /* add class for text */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Helvetica;
+  color: white;
+  text-shadow: 1px 1px black;
+  font-size: 2em; /* make the text twice as big */
+  transition: opacity 0.15s linear; /* add transition for opacity */
+}
+
+.link:hover .link-text { /* reference the text class */
+  opacity: 0; /* make the text disappear */
+}
+
+.vig{
+  
+  width:100%;
+  height:100%;
+  background-color: black; 
+  background-image: radial-gradient(ellipse at 50% 50%, #ffffff, black 100%); 
+  important!;
+  
+}
