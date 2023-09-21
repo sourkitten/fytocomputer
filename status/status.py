@@ -85,7 +85,7 @@ async def status(ctx):
         f"```-- SYSTEM --\n"
         f"UP:  {system_uptime}\n"
         f"CPU: {cpu_utilization}%\n"
-        f"RAM: {ram_info.percent}% ({(ram_info.used / (1024 ** 3)):.2f}/{int(ram_info.total / (1024 ** 3))})\n\n"
+        f"RAM: {ram_info.percent}% ({(ram_info.used / (1024 ** 3)):.2f}/{int(round(ram_info.total / (1024 ** 3)))}GB)\n\n"
         f"-- WEBSERVER --\n"
         f"System IP:             {system_ip}\n"
         f"pog.fytocomputer.gr:   {pog_ip}\n"
