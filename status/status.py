@@ -60,7 +60,7 @@ async def status(ctx):
 
     # Get the status of the Grafana service using systemctl
     try:
-        grafana_status = subprocess.check_output(['systemctl', 'is-active', 'grafana.service']).decode('utf-8').strip()
+        grafana_status = subprocess.check_output(['systemctl', 'is-active', 'grafana-server.service']).decode('utf-8').strip()
         grafana_status = "up" if grafana_status == "active" else "down"
     except subprocess.CalledProcessError:
         grafana_status = "[ unavailable ]"
@@ -75,7 +75,7 @@ async def status(ctx):
     # Get the status of the Crafty service using systemctl
     try:
         crafty_status = subprocess.check_output(['systemctl', 'is-active', 'crafty.service']).decode('utf-8').strip()
-        crafty_status = "up" if sshd_status == "active" else "down"
+        crafty_status = "up" if crafty_status == "active" else "down"
     except subprocess.CalledProcessError:
         crafty_status = "[ unavailable ]"
     
