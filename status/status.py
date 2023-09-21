@@ -13,7 +13,9 @@ intents = discord.Intents.all()
 # Create a bot instance with the specified intents
 bot = commands.Bot(command_prefix='/', intents=intents)
 
-async def status_task():
+@bot.event
+async def on_ready():
+    print(f'Logged in as {bot.user.name}')
     while True:
         activity = discord.Activity(type=discord.ActivityType.watching, name="/status")
         try:
@@ -22,10 +24,6 @@ async def status_task():
         except ConnectionResetError:
             print ("ConnectionResetError: Ignoring..")
             pass
-
-@bot.event
-async def on_ready():
-    print(f'Logged in as {bot.user.name}')
 
 @bot.command(name='status')
 async def status(ctx):
